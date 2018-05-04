@@ -6,7 +6,7 @@ There are numerous methods to minimize batches in Unity
   3. Combine meshes by yourself
   4. GPU skinning (skinned mesh optimization)
 
-VSR_Batch_Minimizer allows you to combine several meshes (with different or multiple materials) in one mesh and save as mesh asset or prefab.
+VSR_Batch_Minimizer allows you to combine several meshes (with different or multiple materials) in one mesh and save mesh  or prefab.
 
 Example - 
 before: 38 batches, 
