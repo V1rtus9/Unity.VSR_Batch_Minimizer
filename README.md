@@ -24,4 +24,6 @@ after: 9 batches
   
   ![after](https://github.com/V1rtus9/VSR_Batch_Minimizer/blob/master/vsr_batch_minimizer_after.png)
   
+  V1rtus9
+  
  
