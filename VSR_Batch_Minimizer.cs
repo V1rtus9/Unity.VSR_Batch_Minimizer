@@ -55,13 +55,9 @@ namespace Virtustellar
 			CombineMeshes(this.gameObject);
 			AddComponentCollider(this.gameObject);
 			AddComponentRigidbody(this.gameObject);
-			DeactivateChildrens(this.gameObject);
-
-		}
-
-		private void OnApplicationQuit()
-		{
+			DestroyChildrens(this.gameObject);
 			SaveOptions(this.gameObject);
+
 		}
 
 		private void AddComponentCollider(GameObject procedural)
@@ -80,26 +76,17 @@ namespace Virtustellar
 			procedural.AddComponent<Rigidbody>().isKinematic = true;
 		}
 
-		public void DeactivateChildrens(GameObject parent)
+		public void DestroyChildrens(GameObject parent)
 		{
 			for (int i = 0; i < parent.transform.childCount; i++)
 			{
-				parent.transform.GetChild(i).gameObject.SetActive(false);
+				Destroy(parent.transform.GetChild(i).gameObject);
 			}
 		}
 
-		private bool isSaved;
 		private void SaveOptions(GameObject procedural, string name = "0123456789")
 		{
-			if (isSaved)
-				return;
-
-			isSaved = true;
-
 			Mesh msh = procedural.GetComponent<MeshFilter>().mesh;
-
-			if (msh == null)
-				return;
 
 			switch (saveAction)
 			{
@@ -110,7 +97,6 @@ namespace Virtustellar
 				case SaveAction.Prefab:
 					SaveAsset(msh, name);
 
-					procedural.transform.DetachChildren();
 					DestroyImmediate(procedural.GetComponent<VSR_Batch_Minimizer>());
 
 					PrefabUtility.ReplacePrefab(procedural, PrefabUtility.CreateEmptyPrefab("Assets/" + name  + ".prefab"), ReplacePrefabOptions.ConnectToPrefab);
