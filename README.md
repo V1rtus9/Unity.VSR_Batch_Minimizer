@@ -1,4 +1,4 @@
-# VSR_Batch_Minimizer
+# VSR Batch Minimizer
 
 There are numerous methods to minimize batches in Unity
   1. Unity own draw call batching  - https://docs.unity3d.com/Manual/DrawCallBatching.html
@@ -13,5 +13,7 @@ before: 38 batches,
 after: 9 batches 
   
   Asset - https://assetstore.unity.com/packages/3d/environments/historic/medieval-defense-low-poly-all-maps-27667
+  
+  ![before](https://github.com/V1rtus9/VSR_Batch_Minimizer/blob/master/example_scene.png)
   
  
