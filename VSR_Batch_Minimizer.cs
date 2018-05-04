@@ -98,6 +98,9 @@ namespace Virtustellar
 
 			Mesh msh = procedural.GetComponent<MeshFilter>().mesh;
 
+			if (msh == null)
+				return;
+
 			switch (saveAction)
 			{
 				case SaveAction.Mesh:
