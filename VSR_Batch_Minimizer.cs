@@ -8,7 +8,7 @@ namespace Virtustellar
 {
 	/**
 	 * Name: VSR_Batch_Minimizer
-	 * Purpose: Draw calls minimization ( I'm using this scripts in own projects )
+	 * Purpose: Draw calls minimization ( I'm using this script in own projects )
 	 * Unity: Tried with 2018.2, 2017.4,2017.3, 2017.2. 2017.1
 	 * Author: V!rtus9
 	 * License: FREE
